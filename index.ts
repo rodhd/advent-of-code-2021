@@ -1,15 +1,15 @@
 import {fetchPuzzleInput} from "./src/shared/fetchPuzzleInput";
-import {parseNumberArray} from "./src/shared/parseNumberArray";
-import {isDepthHigher, slidingWindow} from "./src/scripts/dec-01";
+import {parseStringArray} from "./src/shared/parseStringArray";
+import {calculatePosition, calculatePositionWithAim} from "./src/scripts/dec-02";
 
 async function run(day: number) {
   let input = await fetchPuzzleInput(day);
-  let parsedInput = parseNumberArray(input);
-  let result = slidingWindow(parsedInput);
+  let parsedInput = parseStringArray(input);
+  let result = calculatePositionWithAim(parsedInput);
   console.log(result);
 }
 
-run(1)
+run(2)
   .then( () => {
     console.log('Completed');
   })
