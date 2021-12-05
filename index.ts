@@ -1,15 +1,15 @@
 import {fetchPuzzleInput} from "./src/shared/fetchPuzzleInput";
-import {parseStringArray} from "./src/shared/parseStringArray";
-import {calculatePosition, calculatePositionWithAim} from "./src/scripts/dec-02";
+import {AdventProblems} from "./src/shared/AdventProblems";
 
 async function run(day: number) {
   let input = await fetchPuzzleInput(day);
-  let parsedInput = parseStringArray(input);
-  let result = calculatePositionWithAim(parsedInput);
-  console.log(result);
+  let problem = AdventProblems[day];
+  problem.parseInput(input);
+  problem.solveFirstPuzzle();
+  problem.solveSecondPuzzle();
 }
 
-run(2)
+run(3)
   .then( () => {
     console.log('Completed');
   })
