@@ -9,5 +9,5 @@ export async function fetchPuzzleInput(day: number): Promise<string> {
     }
   };
   let response = await axios(request);
-  return JSON.stringify(response.data);
+  return response.data;
 }
