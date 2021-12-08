@@ -9,7 +9,7 @@ async function run(day: number) {
   problem.solveSecondPuzzle();
 }
 
-run(4)
+run(5)
   .then( () => {
     console.log('Completed');
   })
