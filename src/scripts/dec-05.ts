@@ -128,7 +128,6 @@ export function getLinesOverlapIncludingDiagonals(input: string[]): number {
   let points: [number, number][] = getAllCoveredPointsIncludingDiagonals(lines);
   let pointMap: PointMap = {};
   points.forEach((point) => {
-    console.log(point);
     if(Object.keys(pointMap).includes(point.toString())) {
       pointMap[point.toString()]++;
     }
