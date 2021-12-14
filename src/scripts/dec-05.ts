@@ -152,8 +152,8 @@ export class Dec05Puzzle implements AdventProblem {
   }
 
   solveSecondPuzzle(): void {
-    let result = getLinesOverlapIncludingDiagonals(this.input);
-    console.log(result);
+    //let result = getLinesOverlapIncludingDiagonals(this.input);
+    //console.log(result);
   }
   
   constructor(day: number) {
