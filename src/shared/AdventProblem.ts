@@ -5,3 +5,4 @@ export interface AdventProblem {
   solveFirstPuzzle(): void;
   solveSecondPuzzle(): void;
 }
+
