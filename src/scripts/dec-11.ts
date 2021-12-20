@@ -56,6 +56,24 @@ export function takeHundredSteps(input: number[][]): number {
     return flashes;
 }
 
+function areAllOctopusesFlashing(input: number[][]): boolean {
+    return input.every(row => row.every(val => val === 0));
+}
+
+export function stepWhenAllFlash(input: number[][]): number {
+    let copy = input.map(row => row.map(val => val));
+    let i = 0;
+    while (!areAllOctopusesFlashing(copy)) {
+        const result = takeOneStep(copy);
+        copy = result.result;
+        i = i + 1;
+        if (i % 10 === 0) {
+            console.log(`Step ${i}`)
+        }
+    }
+    return i;
+}
+
 export class Dec11Puzzle extends AdventPuzzle {
     input: number[][];
 
@@ -74,5 +92,6 @@ export class Dec11Puzzle extends AdventPuzzle {
     }
 
     solveSecondPuzzle(): void {
+        console.log(stepWhenAllFlash(this.input));
     }
 }

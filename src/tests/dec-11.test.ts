@@ -1,4 +1,4 @@
-import {getNeighbors, StepResult, takeHundredSteps, takeOneStep} from "../scripts/dec-11";
+import {getNeighbors, StepResult, stepWhenAllFlash, takeHundredSteps, takeOneStep} from "../scripts/dec-11";
 
 const neighborStart = [3, 0];
 const neighborResult = [[2, 0], [2, 1], [3, 1], [4, 1], [4, 0]]
@@ -76,4 +76,8 @@ test('After one step 2', () => {
 
 test('One Hundred Steps Test', () => {
     expect(takeHundredSteps(beforeHundredSteps)).toBe(1656);
+})
+
+test('All octupuses are flashing test', () => {
+    expect(stepWhenAllFlash(beforeHundredSteps)).toBe(195);
 })
