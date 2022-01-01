@@ -10,6 +10,7 @@ import {Dec10Puzzle} from "../scripts/dec-10";
 import {Dec11Puzzle} from "../scripts/dec-11";
 import {Dec12Puzzle} from "../scripts/dec-12";
 import {Dec13Puzzle} from "../scripts/dec-13";
+import {Dec14Puzzle} from "../scripts/dec-14";
 
 type ProblemIndex = {
   [key: number]: AdventProblem
@@ -27,4 +28,5 @@ export const AdventProblems: ProblemIndex = {
   11: new Dec11Puzzle(11),
   12: new Dec12Puzzle(12),
   13: new Dec13Puzzle(13),
+  14: new Dec14Puzzle(14),
 }
